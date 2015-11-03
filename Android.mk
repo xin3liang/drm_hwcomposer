@@ -26,7 +26,8 @@ LOCAL_SHARED_LIBRARIES := \
 	liblog \
 	libsync \
 	libui \
-	libutils
+	libutils \
+	libc++
 
 
 LOCAL_C_INCLUDES := \
@@ -35,6 +36,7 @@ LOCAL_C_INCLUDES := \
 	system/core/include/utils \
 	system/core/libsync \
 	system/core/libsync/include \
+	external/libcxx/include
 
 LOCAL_SRC_FILES := \
 	compositor.cpp \
@@ -71,6 +73,7 @@ LOCAL_MODULE_TAGS := optional
 LOCAL_MODULE_RELATIVE_PATH := hw
 LOCAL_MODULE_CLASS := SHARED_LIBRARIES
 LOCAL_MODULE_SUFFIX := $(TARGET_SHLIB_SUFFIX)
+LOCAL_CPPFLAGS += -std=c++11
 include $(BUILD_SHARED_LIBRARY)
 
 endif
