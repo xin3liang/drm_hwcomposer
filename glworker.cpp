@@ -437,7 +437,7 @@ int GLWorker::Compositor::Init() {
                                    8,
                                    EGL_NONE};
 
-  const EGLint context_attribs[] = {EGL_CONTEXT_CLIENT_VERSION, 3, EGL_NONE};
+  const EGLint context_attribs[] = {EGL_CONTEXT_CLIENT_VERSION, 2, EGL_NONE};
 
   egl_display_ = eglGetDisplay(EGL_DEFAULT_DISPLAY);
   if (egl_display_ == EGL_NO_DISPLAY) {
